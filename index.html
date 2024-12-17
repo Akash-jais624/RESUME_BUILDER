@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUME BUILDER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">RESUME BUILDER</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="nameField"> Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter your name" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactField"> Phone No.</label>
+                    <input type="text" id="contactField" placeholder="Enter your Phone No." class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressField"> Your Address</label>
+                    <textarea id="addressField" placeholder="Enter your address" class="form-control" rows="5"></textarea>  
+                </div>
+                <div class="form-group mt-2">
+                    <label for="mailField"> Email id</label>
+                    <input type="text" id="mailField" placeholder="Enter your mail Id" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">Linkedin Id</label>
+                    <input type="text" id="linkedField" placeholder="Enter your Linkedin Id" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for=""> Career Objective</label>
+                    <textarea id="objectiveField" placeholder="Enter here" class="form-control" ></textarea>  
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Technical Competencies</label>
+                    <textarea id="techField" placeholder="Enter here" class="form-control" ></textarea>  
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Interpersonal Skills</label>
+                    <textarea id="ipsField" placeholder="Enter here" class="form-control" ></textarea>  
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Interests And Hobbies</label>
+                    <textarea id="iahField" placeholder="Enter here" class="form-control" ></textarea>  
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Languages Known</label>
+                    <textarea id="lkField" placeholder="Enter here" class="form-control" ></textarea>  
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h3>Other Details</h3>
+               
+                <div class="form-group mt-2" id="eq">
+                    <label for="">Qualification</label>
+                    <textarea  placeholder="Enter here" class="form-control eqField" ></textarea> 
+                    <div class="container text-center mt-3" id="eqAddButton">
+                        <button onclick="addNewEQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div> 
+                </div>
+                <div class="form-group mt-2" id="we" >
+                    <label for="">Work Experience</label>
+                    <textarea  placeholder="Enter here" class="form-control weField" ></textarea> 
+                    <div class="container text-center mt-3" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div> 
+                </div>
+                <div class="form-group mt-2" id="pr">
+                    <label for="">Project</label>
+                    <textarea  placeholder="Enter here" class="form-control prField" ></textarea> 
+                    <div class="container text-center mt-3" id="prAddButton">
+                        <button onclick="addNewPRField()" class="btn btn-primary btn-sm" >Add</button>
+                    </div> 
+                </div>
+                <div class="form-group mt-2" id="ac">
+                    <label for="">Achievements</label>
+                    <textarea  placeholder="Enter here" class="form-control acField" ></textarea> 
+                    <div class="container text-center mt-3" id="acAddButton">
+                        <button onclick="addNewACField()" class="btn btn-primary btn-sm">Add</button>
+                    </div> 
+                </div>
+                <div class="form-group mt-2" id="ce" >
+                    <label for="">Certifications</label>
+                    <textarea  placeholder="Enter here" class="form-control ceField" ></textarea> 
+                    <div class="container text-center mt-3" id="ceAddButton">
+                        <button onclick="addNewCEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div> 
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button onclick="generateResume()" class="btn btn-primary btn-lg">Generate RESUME</button>
+        </div>
+    </div>
+    <!-- cv - templet -->
+    <div class="container" id="cv-templates">
+        <div class="row">
+            <div class="col-md-4 text-center py-1 background">
+                <!-- first col -->
+                <img src="default img.jpg" alt="" class="img-fluid myimg">
+                <div class="container">
+                    <p id="nameT">Akash Kumar Jaiswal</p>
+                    <p id="contactT" >+919792578535, +919807256520</p>
+                    <p id="addressT">621/2 Sita Ram Nagar Ahirwan, Kanpur, India</p>
+
+                    <p>
+                        <a id="mailT" href="#1">akashjaiswalmrj624@gmail.com</a>
+                    </p>
+                    <p> 
+                        <a id="linkedT" href="#1">Linkedin</a>
+                    </p>
+
+                    <hr>
+                </div>
+                <div class="card">
+                    <div class="card-header background">
+                       <h3>Career Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills. I aim to use my coding and design abilities to build interactive and efficient online platforms.</p>
+                    </div>
+                </div>
+                <div class="tech">
+                    <div class="tech-header background">
+                        <h3>Technical Competencies</h3>
+                    </div>
+                    <div class="tech-body">
+                        <p id="techT">
+                            C++ | Java | HTML | CSS | JavaScript | React.js | DSA |
+                        </p>
+                    </div>
+                </div>
+                <div class="ips">
+                    <div class="ips-header background">
+                        <h3>Interpersonal Skills</h3>
+                    </div>
+                    <div class="ips-body">
+                        <p id="ipsT">
+                            Team Leadership | Public speaking | Quick Learner
+                        </p>
+                    </div>
+                </div>
+                <div class="iah">
+                    <div class="iah-header background">
+                        <h3>Interests And Hobbies</h3>
+                    </div>
+                    <div class="iah-body">
+                        <p id="iahT">
+                            Travelling | Cooking | Food Explorer| Badminton | Online Games.
+                        </p>
+                    </div>
+                </div>
+                <div class="lk">
+                    <div class="lk-header background">
+                        <h3>Languages Known</h3>
+                    </div>
+                    <div class="lk-body">
+                        <p id="lkT">
+                            English | Hindi
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- this is second column -->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                       <h3>Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eqT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                        </ul>
+                        
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header background">
+                       <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header background">
+                       <h3>Projects</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="prT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header background">
+                       <h3>Achievements</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="acT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header background">
+                       <h3>Certifications</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="ceT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button onclick="printResume()" class="btn background">
+                        Print RESUME
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

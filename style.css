@@ -1,0 +1,34 @@
+#cv-form{
+    /* display: none; */
+}
+.myimg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+   
+}
+.background{
+    background-color: #FAEED1;
+}
+.container{
+    text-align: left;
+}
+#nameT{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.card{
+    text-align: left;
+    background-color: white;
+}
+.tech{
+    text-align: left;
+    background-color: white;
+}
+.ips, .iah , .lk{
+    text-align: left;
+    background-color: white;
+}
+
